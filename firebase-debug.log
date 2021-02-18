@@ -1,0 +1,140 @@
+[debug] [2021-02-18T12:57:11.804Z] ----------------------------------------------------------------------
+[debug] [2021-02-18T12:57:11.808Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-02-18T12:57:11.808Z] CLI Version:   9.4.0
+[debug] [2021-02-18T12:57:11.808Z] Platform:      win32
+[debug] [2021-02-18T12:57:11.809Z] Node Version:  v12.16.1
+[debug] [2021-02-18T12:57:11.810Z] Time:          Thu Feb 18 2021 09:57:11 GMT-0300 (GMT-03:00)
+[debug] [2021-02-18T12:57:11.810Z] ----------------------------------------------------------------------
+[debug] [2021-02-18T12:57:11.810Z] 
+[debug] [2021-02-18T12:57:11.818Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-18T12:57:11.819Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\workspace\guess who
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-02-18T12:57:24.542Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-02-18T12:57:25.760Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-02-18T12:57:25.760Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project guess-who-46717 (Guess Who) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-02-18T12:57:27.651Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-18T12:57:27.651Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-18T12:57:27.814Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 18 Feb 2021 12:57:28 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-18T12:57:27.819Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/guess-who-46717/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-02-18T12:57:28.941Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:57:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2021-02-18T12:57:28.943Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/guess-who-46717/services/firebasedatabase.googleapis.com:enable  
+ 
+[debug] [2021-02-18T12:57:30.526Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:57:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-18T12:57:40.528Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/guess-who-46717/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-02-18T12:57:41.541Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:57:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-02-18T12:57:41.546Z] > refreshing access token with scopes: []
+[debug] [2021-02-18T12:57:41.546Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-18T12:57:41.703Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Thu, 18 Feb 2021 12:57:42 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-18T12:57:41.707Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/guess-who-46717 [none]
+[debug] [2021-02-18T12:57:42.054Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/guess-who-46717 200
+[debug] [2021-02-18T12:57:42.054Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/guess-who-46717 {"projectId":"guess-who-46717","projectNumber":"1059489027949","displayName":"Guess Who","name":"projects/guess-who-46717","resources":{"hostingSite":"guess-who-46717"},"state":"ACTIVE"}
+[debug] [2021-02-18T12:58:04.128Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-18T12:58:04.128Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-18T12:58:04.279Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 18 Feb 2021 12:58:04 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-18T12:58:04.285Z] >>> HTTP REQUEST POST https://firebasedatabase.googleapis.com/v1beta/projects/guess-who-46717/locations/us-central1/instances?databaseId=guess-who-46717-default-rtdb&validateOnly=true  
+ {"type":"default_database"}
+[debug] [2021-02-18T12:58:05.651Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:58:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-18T12:58:05.653Z] >>> HTTP REQUEST POST https://firebasedatabase.googleapis.com/v1beta/projects/guess-who-46717/locations/us-central1/instances?databaseId=guess-who-46717-default-rtdb  
+ {"type":"default_database"}
+[debug] [2021-02-18T12:58:07.771Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:58:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2021-02-18T12:58:13.505Z] >>> HTTP REQUEST GET https://guess-who-46717-default-rtdb.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2021-02-18T12:58:14.220Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Thu, 18 Feb 2021 12:58:14 GMT","content-type":"application/json; charset=utf-8","content-length":"161","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  Database Rules for guess-who-46717-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2021-02-18T12:58:14.245Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-18T12:58:14.245Z] > authorizing via signed-in user
+[debug] [2021-02-18T12:58:14.246Z] [iam] checking project guess-who-46717 for permissions ["firebase.projects.get"]
+[debug] [2021-02-18T12:58:14.246Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/guess-who-46717:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-02-18T12:58:15.171Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:58:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=782","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-18T12:58:15.172Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/guess-who-46717/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2021-02-18T12:58:15.173Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/guess-who-46717/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2021-02-18T12:58:16.163Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:58:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-18T12:58:16.643Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 18 Feb 2021 12:58:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-02-18T12:59:38.949Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-02-18T12:59:39.043Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-02-18T12:59:39.043Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.2.7","browserURL":"https://www.gstatic.com/firebasejs/8.2.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.2.7/firebase.tgz"},"live":{"version":"8.2","browserURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.2.7/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.2.7/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.2.7/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.2.7/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.2.7/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.memory.js"}}
+[info] +  Wrote web/www/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\workspace\guess who is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=868406105&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-02-18T13:01:04.313Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"74d5540a7f1e73870cae","redirect_uri":"http://localhost:9005","state":"868406105"}
+[debug] [2021-02-18T13:01:04.946Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Thu, 18 Feb 2021 13:01:05 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"7bc14b504cde10e385653598270bd487\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"C235:3072:E5E760:126C653:602E6511"}
+[debug] [2021-02-18T13:01:04.961Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-02-18T13:01:05.514Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-02-18T13:01:05.514Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Carlos-Benedetti","id":29128001,"node_id":"MDQ6VXNlcjI5MTI4MDAx","avatar_url":"https://avatars.githubusercontent.com/u/29128001?v=4","gravatar_id":"","url":"https://api.github.com/users/Carlos-Benedetti","html_url":"https://github.com/Carlos-Benedetti","followers_url":"https://api.github.com/users/Carlos-Benedetti/followers","following_url":"https://api.github.com/users/Carlos-Benedetti/following{/other_user}","gists_url":"https://api.github.com/users/Carlos-Benedetti/gists{/gist_id}","starred_url":"https://api.github.com/users/Carlos-Benedetti/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Carlos-Benedetti/subscriptions","organizations_url":"https://api.github.com/users/Carlos-Benedetti/orgs","repos_url":"https://api.github.com/users/Carlos-Benedetti/repos","events_url":"https://api.github.com/users/Carlos-Benedetti/events{/privacy}","received_events_url":"https://api.github.com/users/Carlos-Benedetti/received_events","type":"User","site_admin":false,"name":"Carlos.lopes","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":11,"public_gists":3,"followers":6,"following":5,"created_at":"2017-06-01T17:12:01Z","updated_at":"2021-02-18T13:01:01Z","private_gists":0,"total_private_repos":9,"owned_private_repos":9,"disk_usage":72425,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Carlos-Benedetti 
+[info] 
+[debug] [2021-02-18T13:01:25.622Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2021-02-18T13:01:26.064Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2021-02-18T13:01:26.064Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-02-18T13:01:48.334Z] >>> [apiv2][query] GET https://api.github.com/repos/user/actions/secrets/public-key type=owner
+[debug] [2021-02-18T13:01:48.801Z] <<< [apiv2][status] GET https://api.github.com/repos/user/actions/secrets/public-key 404
+[debug] [2021-02-18T13:01:48.801Z] <<< [apiv2][body] GET https://api.github.com/repos/user/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}

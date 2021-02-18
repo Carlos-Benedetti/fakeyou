@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>coffeemaker <ion-label *ngIf="coffeeMakerController">{{coffeeMakerController.ip}}</ion-label> </ion-title>
+    <ion-button slot="end" (click)="forceActionSheet()">
+      <ion-icon name="settings-outline"></ion-icon>
+    </ion-button>
+    <app-request-loader></app-request-loader>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Tempo de execução</ion-label>
+    <ion-datetime #executionTime display-format="mm:ss" value="2019-10-01T15:05:00.000Z"
+      minute-values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" display-timezone="utc"></ion-datetime>
+  </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Fazer Café</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p *ngIf="coffeeIntent && !coffeeIntent.done">T: -{{coffeeIntent.timeRemaning}} segundos</p>
+      <ion-progress-bar *ngIf="coffeeIntent && !coffeeIntent.done" [value]="coffeeIntent.timerpassed"></ion-progress-bar>
+      <ion-button size="large" color="success" (click)="startCoffee()" *ngIf="!coffeeIntent || (coffeeIntent && coffeeIntent.done)">
+        Iniciar
+        <ion-icon slot="end" name="cafe-outline"></ion-icon>
+      </ion-button>
+      <ion-button size="large" color="danger"  (click)="endCoffee()" *ngIf="coffeeIntent && !coffeeIntent.done">
+        Encerrar
+        <ion-icon slot="end" name="cafe-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

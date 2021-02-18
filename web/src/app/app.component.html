@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Cafeteira</ion-list-header>
+          <ion-note (click)="doLogin()">login</ion-note>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item routerDirection="root" routerLink="/bluetooth-find" lines="none" detail="false" [class.selected]="TODO">
+              <ion-icon slot="start" name="bluetooth-outline"></ion-icon>
+              <ion-label>Buscar Caffeteira</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header>Labels</ion-list-header>
+
+          <ion-item *ngFor="let coffeeMaker of coffeemakerDBSvc.coffeeMakers | keyvalue" lines="none" [routerLink]="'/coffeemaker/'+coffeeMaker.value.id">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ coffeeMaker.value.name || coffeeMaker.velue.ip || 'coffeeMaker' }}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
